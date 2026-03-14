@@ -52,6 +52,9 @@ export default async function sharedConfig(eleventyConfig, options = {}) {
     useTransform: true
   });
 
+  // --------------------- bundle
+  eleventyConfig.addBundle('css', {hoist: false});
+
   eleventyConfig.addPlugin(plugins.eleventyImageTransformPlugin, {
     formats: ['webp', 'jpeg'],
     widths: ['auto'],
@@ -63,9 +66,6 @@ export default async function sharedConfig(eleventyConfig, options = {}) {
       pictureAttributes: {}
     }
   });
-
-  // --------------------- bundle
-  eleventyConfig.addBundle('css', { hoist: true });
 
   // --------------------- Library and Data
   eleventyConfig.setLibrary('md', plugins.markdownLib);
