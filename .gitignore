@@ -1,6 +1,14 @@
 # Node modules
 node_modules
 
+# OS / editor junk
+.DS_Store
+.DS_Store?
+Thumbs.db
+*.swp
+*.swo
+*~
+
 # generated files
 dist
 src/_includes/css
